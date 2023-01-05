@@ -1,4 +1,4 @@
-package org.patterns.creational;
+package com.patterns.builder;
 
 public class App {
     public static void main(String args[]) {
