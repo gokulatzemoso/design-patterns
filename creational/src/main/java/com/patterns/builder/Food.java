@@ -1,4 +1,4 @@
-package org.patterns.creational;
+package com.patterns.builder;
 
 import lombok.Setter;
 
