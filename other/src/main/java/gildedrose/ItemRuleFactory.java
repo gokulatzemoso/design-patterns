@@ -9,8 +9,8 @@ public class ItemRuleFactory {
             case B -> new Rule2();
             case C -> new DefaultRule();
             case D -> new DefaultRule();
-            case E -> new Rule3();
-            case F -> new Rule5();
+            case E -> new NoOpRule();
+            case F -> new Rule3();
             default -> new DefaultRule();
         };
     }
