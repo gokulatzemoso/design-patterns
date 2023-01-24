@@ -7,11 +7,23 @@ public interface AbstractRule {
 
     default void updateItem(Item item) {
         if (item.quality > 0) {
-            item.quality--;
+            AbstractRule.decreaseItemQualityBy(item, 1);
         }
-        item.sellIn--;
+        AbstractRule.decreaseSellinBy(item, 1);
         if (item.sellIn < 0 && item.quality > 0) {
-            item.quality--;
+            AbstractRule.decreaseItemQualityBy(item, 1);
         }
+    }
+
+    static void decreaseItemQualityBy(Item item, int decreaseBy) {
+        item.quality = item.quality - decreaseBy;
+    }
+
+    static void increaseItemQualityBy(Item item, int increaseBy) {
+        item.quality = item.quality + increaseBy;
+    }
+
+    static void decreaseSellinBy(Item item, int decreaseBy) {
+        item.sellIn = item.sellIn - decreaseBy;
     }
 }
