@@ -22,6 +22,8 @@
     </build>
     <modules>
         <module>creational</module>
+        <module>structural</module>
+        <module>other</module>
     </modules>
 
     <properties>
